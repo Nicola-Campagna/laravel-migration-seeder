@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Trains;
+use App\Models\Train;
 
 class PageController extends Controller
 {
-    public function homepage(){
-        $train=Trains::all();
-
-    return view('welcome',compact('train'));
-    }
-
+ public function index(){
+    $trains=Train::all();
+    return view('welcome',compact('trains'));
+ }
 }

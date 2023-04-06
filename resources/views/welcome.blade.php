@@ -12,27 +12,13 @@
 </head>
 
 <body>
-    {{-- <div class="container">
-        <div class="table">
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-        </div>
-    </div> --}}
-
-    @php
-    non riesco a stampare perchè non mi arrivano i dati del database
-    ho fatto coorettamente la migration ?
-        dd($train);
-    @endphp
+    {{-- @php
+        var_dump($trains);
+    @endphp --}}
+    @foreach ($trains as $train)
+        <h1>{{ $train->azienda }}</h1>
+        <h1>{{ $train->id }}</h1>
+    @endforeach
 </body>
 
 </html>
